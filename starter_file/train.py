@@ -15,7 +15,7 @@ ws = Workspace.from_config()
 def clean_data(data):
     # Clean and one hot encode data
     x_df = data.to_pandas_dataframe().dropna()
-    y_df = x_df.pop("y")
+    y_df = x_df.pop("target")
     
     return(x_df, y_df)
 
