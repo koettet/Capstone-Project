@@ -6,7 +6,7 @@ import azureml.train.automl
 from sklearn.externals import joblib
 from sklearn.linear_model import Ridge
 import os
-# import onnxruntime
+import onnxruntime
 
 from inference_schema.schema_decorators import input_schema, output_schema
 from inference_schema.parameter_types.standard_py_parameter_type import StandardPythonParameterType
@@ -32,17 +32,19 @@ sample_output = np.array([0])
 outputs = StandardPythonParameterType({'Results':sample_output}) # 'Results' is case sensitive
 
 def init():
-#     global sess
-#     sess = onnxruntime.InferenceSession(
-#         os.path.join(os.getenv("AZUREML_MODEL_DIR"), "model.onnx")
-#     )   
-    global model
-    # Replace filename if needed.
-    model_path = os.path.join(os.getenv('AZUREML_MODEL_DIR'), 'outputs/model.pkl')
-    # Deserialize the model file back into a sklearn model.
-    model = joblib.load(model_path)    
+     global sess
+     sess = onnxruntime.InferenceSession(
+         os.path.join(os.getenv("AZUREML_MODEL_DIR"), "model.onnx")
+     )   
+#    global model
+#    # Replace filename if needed.
+#    model_path = os.path.join(os.getenv('AZUREML_MODEL_DIR'), 'outputs/model.pkl')
+#    # Deserialize the model file back into a sklearn model.
+#    model = joblib.load(model_path)    
     
-    
+
+
+
     
 @input_schema('data', sample_input) 
 # 'Inputs' is case sensitive
