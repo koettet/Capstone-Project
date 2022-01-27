@@ -32,7 +32,8 @@ The project uses the dataset 'Heart Disease UCI' from Kaggle. This dataset origi
 13. `thal` - 3 = normal; 6 = fixed defect; 7 = reversable defect
 14. `target` - 0 = no heart disease present; 1 = heart disease present
 
-Please check Kaggle and the UCI machine learning repository for further details
+
+Please check Kaggle and the UCI machine learning repository for further details:
 
 https://www.kaggle.com/ronitf/heart-disease-uci
 
