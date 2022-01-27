@@ -33,7 +33,9 @@ The project uses the dataset 'Heart Disease UCI' from Kaggle. This dataset origi
 14. `target` - 0 = no heart disease present; 1 = heart disease present
 
 Please check Kaggle and the UCI machine learning repository for further details
+
 https://www.kaggle.com/ronitf/heart-disease-uci
+
 https://archive.ics.uci.edu/ml/datasets/Heart+Disease
 
 Acknowledgements
