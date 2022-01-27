@@ -80,6 +80,9 @@ Weighted AUC is used a primary metric to measure the models performance and dete
 ### Results
 *TODO*: What are the results you got with your automated ML model? What were the parameters of the model? How could you have improved it?
 
+The best model I got from aml was a VotingEnsemble with an AUC weighted of 0.932.
+By looking at the results from my frist run I could have started a second run with some model types blocked to increase the chances of finding a better solution.
+
 *TODO* Remeber to provide screenshots of the `RunDetails` widget as well as a screenshot of the best model trained with it's parameters.
 
 ## Hyperparameter Tuning
@@ -96,6 +99,9 @@ The conversion process will only allow this value as maximum number of iteration
 
 ### Results
 *TODO*: What are the results you got with your model? What were the parameters of the model? How could you have improved it?
+
+The best model I got from my custom model witrh HyperDrive had an AUC weighted of 0.894.
+I could have tried other model than logistic regression. I also could have done a lot more runs than just 20 and experimented more with my parameter ranges given to HyperDrive.
 
 *TODO* Remeber to provide screenshots of the `RunDetails` widget as well as a screenshot of the best model trained with it's parameters.
 
