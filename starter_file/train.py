@@ -26,7 +26,7 @@ dataset = Dataset.get_by_name(ws, name='heart-data')
 x, y = clean_data(dataset)
 
 # TODO: Split data into train and test sets.
-x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.3, random_state=123)
+x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.15, random_state=123)
 
 run = Run.get_context()
 
@@ -44,9 +44,11 @@ def main():
 
     model = LogisticRegression(C=args.C, max_iter=args.max_iter).fit(x_train, y_train)
 
-    # AUC_weighted = roc_auc_score(y_test, model.predict_proba(x_test)[:, 1], average="weighted")
-    accuracy = model.score(x_test, y_test)
-    run.log("accuracy", np.float(accuracy))
+    AUC_weighted = roc_auc_score(y_test, model.predict_proba(x_test)[:, 1], average="weighted")
+    # accuracy = model.score(x_test, y_test)
+    run.log("AUC_weighted", np.float(AUC_weighted))
+    
+    joblib.dump(model, 'outputs/model.joblib')
 
 if __name__ == '__main__':
     main()

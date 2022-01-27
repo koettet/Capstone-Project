@@ -1,5 +1,6 @@
 dependencies:
 - python=3.6.2
 - scikit-learn
+- pandas==0.25.1
 - pip:
-  - azureml-defaults
+  - azureml-defaults 
