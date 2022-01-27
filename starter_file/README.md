@@ -34,6 +34,8 @@ The project uses the dataset 'Heart Disease UCI' from Kaggle. This dataset origi
 13. `thal` - 3 = normal; 6 = fixed defect; 7 = reversable defect
 14. `target` - 0 = no heart disease present; 1 = heart disease present
 
+![data_overview](https://user-images.githubusercontent.com/96047873/151367145-9b1b25ac-0f59-4c31-a9b8-b1116f5181a2.PNG)
+
 
 Please check Kaggle and the UCI machine learning repository for further details:
 
@@ -85,6 +87,11 @@ By looking at the results from my frist run I could have started a second run wi
 
 *TODO* Remeber to provide screenshots of the `RunDetails` widget as well as a screenshot of the best model trained with it's parameters.
 
+![Model_results_AML](https://user-images.githubusercontent.com/96047873/151367265-95292404-1d82-414a-9d36-4bc5e8cacbf3.PNG)
+
+![RunDetails_AML](https://user-images.githubusercontent.com/96047873/151367294-2b199d3e-a1b7-42b5-b0ff-2101b6c98ddf.PNG)
+
+
 ## Hyperparameter Tuning
 *TODO*: What kind of model did you choose for this experiment and why? Give an overview of the types of parameters and their ranges used for the hyperparameter search.
 
@@ -105,11 +112,20 @@ I could have tried other model than logistic regression. I also could have done 
 
 *TODO* Remeber to provide screenshots of the `RunDetails` widget as well as a screenshot of the best model trained with it's parameters.
 
+![Model_results_HDR](https://user-images.githubusercontent.com/96047873/151367332-740ff8d1-c5ad-4754-b14f-3610cbc991ca.PNG)
+
+![RunDetails_HDR_1](https://user-images.githubusercontent.com/96047873/151367348-f336ae3f-5d49-41c0-9922-6e7447b82220.PNG)
+
+![RunDetails_HDR_2](https://user-images.githubusercontent.com/96047873/151367368-92bb39b9-f33e-4618-aa54-f90c2f07b185.PNG)
+
+
 ## Model Deployment
 *TODO*: Give an overview of the deployed model and instructions on how to query the endpoint with a sample input.
 
 Currently the data can be provided in the script directly via JSON. This is not very user friendly but good enough to quickly check if the endpoint is functioning as expected.
 For a MVP I would create the possibility of reading files as user input like a CSV.
+
+![Endpoint](https://user-images.githubusercontent.com/96047873/151367467-c4656826-f747-4a5c-8da5-ebe844719ac2.PNG)
 
 ### Sample input:
 *These two oberservation were creted by me by using two original observations and changing randomly the values.*
@@ -156,7 +172,15 @@ For a MVP I would create the possibility of reading files as user input like a C
 - Demo of the deployed  model
 - Demo of a sample request sent to the endpoint and its response
 
-### LINK
+### https://youtu.be/PwRP5KBSbPM
+
+Audio did not work this time, therefore I want to provide some bulletpoints regarding the video.
+
+1) I am showing that I completed two run, one for AML and one with HyperDrive.
+2) The best model from AML was a VotingEnsemble with an AUC weighted of 0.93
+3) The best model from HDR was a logistic regression model with an AUC weighted of 0.89.
+4) I then deployed the VotingEnsemble as the best model I could get.
+5) In the end I used two new observations and send a request to the endpoint. THe result: 0, 1 means that the model predicts for the first person not heart disease but for the second it does.
 
 ## Standout Suggestions
 *TODO (Optional):* This is where you can provide information about any standout suggestions that you have attempted.
