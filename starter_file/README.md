@@ -180,7 +180,7 @@ Audio did not work this time, therefore I want to provide some bulletpoints rega
 2) The best model from AML was a VotingEnsemble with an AUC weighted of 0.93
 3) The best model from HDR was a logistic regression model with an AUC weighted of 0.89.
 4) I then deployed the VotingEnsemble as the best model I could get.
-5) In the end I used two new observations and send a request to the endpoint. The result: 0, 1 means that the model predicts for the first person not heart disease but for the second it does.
+5) In the end I used two new observations and send a request to the endpoint. The result: [1,0] means that the model predicts for the first person a possible heart disease but for the second it does not.
 
 ## Standout Suggestions
 *TODO (Optional):* This is where you can provide information about any standout suggestions that you have attempted.
