@@ -79,6 +79,11 @@ Weighted AUC is used a primary metric to measure the models performance and dete
 I used a logistic regression model for this task. From my experience, this model often performs well in classification tasks and is an established model in the community.
 The hyperparameters used and their limitations were the following:
 
+C - Inverse of regularization strength: 0.1 to 1 sampled by uniform distribution
+This variable controls the regularization. Smaller values mean a stronger regularization.
+
+max_iter- Maximum number of iterations to converge: 1000 or 10000 randomly picked
+The conversion process will only allow this value as maximum number of iterations. This variable can be used to shorten or lengthen the runs.
 
 ### Results
 *TODO*: What are the results you got with your model? What were the parameters of the model? How could you have improved it?
@@ -88,6 +93,48 @@ The hyperparameters used and their limitations were the following:
 ## Model Deployment
 *TODO*: Give an overview of the deployed model and instructions on how to query the endpoint with a sample input.
 
+Currently the data can be provided in the script directly via JSON. This is not very user friendly but good enough to quickly check if the endpoint is functioning as expected.
+For a MVP I would create the possibility of reading files as user input like a CSV.
+
+### Sample input:
+*These two oberservation were creted by me by using two original observations and changing randomly the values.*
+
+"data ="{
+   "data":[
+      {
+         "age":51,
+         "sex":0,
+         "cp":1,
+         "trestbps":125,
+         "chol":301,
+         "fbs":1,
+         "restecg":1,
+         "thalach":160,
+         "exang":0,
+         "oldpeak":0.3,
+         "slope":2,
+         "ca":0,
+         "thal":2
+      },
+      {
+         "age":57,
+         "sex":1,
+         "cp":0,
+         "trestbps":98,
+         "chol":226,
+         "fbs":0,
+         "restecg":1,
+         "thalach":150,
+         "exang":0,
+         "oldpeak":2.5,
+         "slope":2,
+         "ca":1,
+         "thal":3
+      }
+   ]
+}
+
+
 ## Screen Recording
 *TODO* Provide a link to a screen recording of the project in action. Remember that the screencast should demonstrate:
 - A working model
@@ -96,3 +143,9 @@ The hyperparameters used and their limitations were the following:
 
 ## Standout Suggestions
 *TODO (Optional):* This is where you can provide information about any standout suggestions that you have attempted.
+
+1. Only 13 of the 75 features were used. By including further features we might be able to generate a better performace.
+2. For AML only one run was done. By taken these result into account for a second run a better solution might be possible. One option could be to block certrain model types to find a better solution by using the compute power more efficiently. 
+3. Only logistic regression was was considererd as custom model. Further HyperDrive runs with other model types could be considered.
+4. Instead of weighted AUC other metrics could be used. However, I feel like the AUC is a good pick without knowing more details.
+5. The dataset should be grown and upted by further observations. Also before using the model anywhere in the world and for all kind of people, I would check where and how the observations of the dataset were created. This might help to determine the validity of the model for new observations.
