@@ -82,14 +82,33 @@ Weighted AUC is used a primary metric to measure the models performance and dete
 ### Results
 *TODO*: What are the results you got with your automated ML model? What were the parameters of the model? How could you have improved it?
 
-The best model I got from aml was a VotingEnsemble with an AUC weighted of 0.932.
+The best model I got from aml was a VotingEnsemble with an AUC weighted of 0.931.
 By looking at the results from my frist run I could have started a second run with some model types blocked to increase the chances of finding a better solution.
 
 *TODO* Remeber to provide screenshots of the `RunDetails` widget as well as a screenshot of the best model trained with it's parameters.
 
-![Model_results_AML](https://user-images.githubusercontent.com/96047873/151367265-95292404-1d82-414a-9d36-4bc5e8cacbf3.PNG)
+#### RunDetails widget
+![BestModel_RunDetailsWidget](https://user-images.githubusercontent.com/96047873/151607135-8e0268a3-2878-4753-951d-b711cfc40abe.PNG)
 
-![RunDetails_AML](https://user-images.githubusercontent.com/96047873/151367294-2b199d3e-a1b7-42b5-b0ff-2101b6c98ddf.PNG)
+#### Details of the best AML run:
+![Best_AML_run](https://user-images.githubusercontent.com/96047873/151607034-09df7e74-b866-44f3-8398-1e937e359645.PNG)
+![BestRun_overview](https://user-images.githubusercontent.com/96047873/151607186-e810b712-35ba-4450-a8a0-dea5e921a0d5.PNG)
+
+#### Model details in AZURE ML studio
+![BestModel_overview](https://user-images.githubusercontent.com/96047873/151607215-62f8bbee-bbce-4ad7-935a-1d7cd80cbbd5.PNG)
+
+
+#### Model interpretation
+
+![BestModel_explanation](https://user-images.githubusercontent.com/96047873/151607469-bf7c54e5-4d70-42a5-a241-c002cc11de1c.PNG)
+
+The graph above shows use the importance of the top five features. I do not have details about how exactly the features are measured/observed for a new patient. With that knowledge we might be able to get some insights into the most present causes for heart diseases and this might also help to take predictive measurements against it.
+
+13. `thal` - 3 = normal; 6 = fixed defect; 7 = reversable defect
+3. `cp` - chest pain type (4 values)
+12. `ca` - number of major vessels (0-3) colored by flourosopy
+11. `slope` - the slope of the peak exercise ST segment
+9. `exang` - exercise induced angina
 
 
 ## Hyperparameter Tuning
@@ -107,7 +126,7 @@ The conversion process will only allow this value as maximum number of iteration
 ### Results
 *TODO*: What are the results you got with your model? What were the parameters of the model? How could you have improved it?
 
-The best model I got from my custom model witrh HyperDrive had an AUC weighted of 0.894.
+The best model I got from my custom model with HyperDrive had an AUC weighted of 0.894.
 I could have tried other model than logistic regression. I also could have done a lot more runs than just 20 and experimented more with my parameter ranges given to HyperDrive.
 
 *TODO* Remeber to provide screenshots of the `RunDetails` widget as well as a screenshot of the best model trained with it's parameters.
@@ -122,10 +141,9 @@ I could have tried other model than logistic regression. I also could have done 
 ## Model Deployment
 *TODO*: Give an overview of the deployed model and instructions on how to query the endpoint with a sample input.
 
-Currently the data can be provided in the script directly via JSON. This is not very user friendly but good enough to quickly check if the endpoint is functioning as expected.
-For a MVP I would create the possibility of reading files as user input like a CSV.
+The model was deployed, so that there is an endpoint in AZURE available to get a model response via http. In this case I did not enable authentication for simplicity. However this could easily be done to avoid secrity problems.
 
-![Endpoint](https://user-images.githubusercontent.com/96047873/151367467-c4656826-f747-4a5c-8da5-ebe844719ac2.PNG)
+To use the model without authentication, only the REST endpoint is needed. 
 
 ### Sample input:
 *These two oberservation were creted by me by using two original observations and changing randomly the values.*
