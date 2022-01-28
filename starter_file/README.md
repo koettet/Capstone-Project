@@ -182,11 +182,15 @@ Audio did not work this time, therefore I want to provide some bulletpoints rega
 4) I then deployed the VotingEnsemble as the best model I could get.
 5) In the end I used two new observations and send a request to the endpoint. The result: [1,0] means that the model predicts for the first person a possible heart disease but for the second it does not.
 
-## Standout Suggestions
-*TODO (Optional):* This is where you can provide information about any standout suggestions that you have attempted.
+## Suggestions for possible further improvements
+
+These are some thoughts on how to possibly reach an even better performing model.
 
 1. Only 13 of the 75 features were used. By including further features we might be able to generate a better performace.
 2. For AML only one run was done. By taken these result into account for a second run a better solution might be possible. One option could be to block certrain model types to find a better solution by using the compute power more efficiently. 
 3. Only logistic regression was was considererd as custom model. Further HyperDrive runs with other model types could be considered.
 4. Instead of weighted AUC other metrics could be used. However, I feel like the AUC is a good pick without knowing more details.
 5. The dataset should be grown and upted by further observations. Also before using the model anywhere in the world and for all kind of people, I would check where and how the observations of the dataset were created. This might help to determine the validity of the model for new observations.
+
+## Standout Suggestions
+*TODO (Optional):* This is where you can provide information about any standout suggestions that you have attempted.
