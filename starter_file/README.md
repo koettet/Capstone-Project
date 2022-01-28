@@ -156,6 +156,7 @@ Above we can see most of the script to use the endpoint.
 `requests.post` sends a post request to the service and the response can be seen below:
 
    `1` - heart disease likely
+
    `0` - heart disease not likely
    
 The model might be mistaken, therefore the response can only be used as an early indicator. 
