@@ -146,7 +146,7 @@ The model was deployed, so that there is an endpoint in AZURE available to get a
 To use the model without authentication, only the REST endpoint is needed. 
 In this case it looked like this: "http://656f6252-fe56-47d7-ab60-99536950e4b8.southcentralus.azurecontainer.io/score"
 
-![image](https://user-images.githubusercontent.com/96047873/151609063-6a96b02b-cd12-4759-a8dd-5521cdbdec15.png)
+![image](https://user-images.githubusercontent.com/96047873/151610011-0feb0d14-9294-430e-8dc5-597be2d046c0.png)
 
 Above we can see most of the script to use the endpoint. 
 `input_data` is a JSON file containing data for the model to score.
