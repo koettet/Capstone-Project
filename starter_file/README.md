@@ -172,8 +172,6 @@ For a MVP I would create the possibility of reading files as user input like a C
 - Demo of the deployed  model
 - Demo of a sample request sent to the endpoint and its response
 
-Old video: https://youtu.be/PwRP5KBSbPM
-
 
 
 `New video link with updated run including the use of the endpoint via HTTP:. This video also has audio.`
@@ -182,6 +180,8 @@ Old video: https://youtu.be/PwRP5KBSbPM
 
 
 
+Old video: https://youtu.be/PwRP5KBSbPM
+
 Audio did not work this time, therefore I want to provide some bulletpoints regarding the video.
 
 1) I am showing that I completed two run, one for AML and one with HyperDrive.
@@ -189,6 +189,7 @@ Audio did not work this time, therefore I want to provide some bulletpoints rega
 3) The best model from HDR was a logistic regression model with an AUC weighted of 0.89.
 4) I then deployed the VotingEnsemble as the best model I could get.
 5) In the end I used two new observations and send a request to the endpoint. The result: [1,0] means that the model predicts for the first person a possible heart disease but for the second it does not.
+
 
 ## Suggestions for possible further improvements
 
