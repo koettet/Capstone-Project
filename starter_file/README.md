@@ -174,7 +174,7 @@ For a MVP I would create the possibility of reading files as user input like a C
 
 
 
-`New video link with updated run including the use of the endpoint via HTTP:. This video also has audio.`
+`New video link with updated run including the use of the endpoint via HTTP. This video also has audio.`
 
 ### https://youtu.be/Z6dplSWbXGY
 
