@@ -172,7 +172,15 @@ For a MVP I would create the possibility of reading files as user input like a C
 - Demo of the deployed  model
 - Demo of a sample request sent to the endpoint and its response
 
-### https://youtu.be/PwRP5KBSbPM
+Old video: https://youtu.be/PwRP5KBSbPM
+
+
+
+´New video link with updated run including the use of the endpoint via HTTP:. This video also has audio.´
+
+### https://youtu.be/Z6dplSWbXGY
+
+
 
 Audio did not work this time, therefore I want to provide some bulletpoints regarding the video.
 
