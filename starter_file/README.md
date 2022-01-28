@@ -149,9 +149,13 @@ In this case it looked like this: "http://656f6252-fe56-47d7-ab60-99536950e4b8.s
 ![image](https://user-images.githubusercontent.com/96047873/151610011-0feb0d14-9294-430e-8dc5-597be2d046c0.png)
 
 Above we can see most of the script to use the endpoint. 
+
 `input_data` is a JSON file containing data for the model to score.
+
 `scoring_uri` is the REST endpoint as string.
+
 `key` would be a needed key if the service was expecting one.
+
 
 `requests.post` sends a post request to the service and the response can be seen below:
 
